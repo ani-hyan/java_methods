@@ -67,11 +67,11 @@ public class Arrays {
         }
         return m;
     }
-    //գումարում է array -ի համապատասխան էլեմենտները և գրում երրորդ array-ի մեջ
 
+    //գումարում է array -ի համապատասխան էլեմենտները և գրում երրորդ array-ի մեջ
     public int[] sum(){
         System.out.print("Enter the size: ");
-        int n = sc.nextInt();
+        int n = Integer.parseInt(sc.next());
         System.out.println("Enter numbers for array 1: ");
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
@@ -99,7 +99,6 @@ public class Arrays {
         return n;
     }
 
-    //TODO 8
     //անդամները նվազման կարգով
 
     public int[] sort(int[] arr){
@@ -126,7 +125,6 @@ public class Arrays {
         }
         return arr;
     }
-    //TODO change
     //հեռացնել բոլոր զրոները
 
     public int[] noZero(int[] a){

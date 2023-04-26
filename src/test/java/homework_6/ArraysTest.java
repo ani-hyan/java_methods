@@ -4,9 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+import java.io.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -43,12 +41,34 @@ class ArraysTest {
 
     //toDo
     @Test
-    void testSum(){
-        ByteArrayInputStream inputStream = new ByteArrayInputStream("3\n4\n".getBytes());
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        Arrays userInputExample = new Arrays(inputStream);
-        int[] a = userInputExample.sum();
-        String outputText = byteArrayOutputStream.toString();
+    void testSum() throws IOException {
+//        InputOutput inputOutput= new InputOutput();
+//
+//        String input = "add 5";
+//        InputStream in = new ByteArrayInputStream(input.getBytes());
+//        System.setIn(in);
+//
+//        assertEquals("add 5", inputOutput.getInput());
+
+        int n = 3;
+        byte[] arr1 = {3,4,5};
+        byte[] arr2 = {1,2,3};
+        InputStream in1 = new ByteArrayInputStream(new byte[]{(byte) n});
+        InputStream in2 = new ByteArrayInputStream(arr1);
+        InputStream in3 = new ByteArrayInputStream(arr2);
+
+        String input = "3";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+//        System.setIn(in2);
+//        System.setIn(in3);
+        assertEquals(new int[]{6,8,10}, arr.sum());
+
+//        ByteArrayInputStream inputStream = new ByteArrayInputStream("3\n4\n".getBytes());
+//        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+//        Arrays userInputExample = new Arrays(inputStream);
+//        int[] a = userInputExample.sum();
+//        String outputText = byteArrayOutputStream.toString();
 //        String key = "output:";
 //        String output = outputText.substring(outputText.indexOf(key) + key.length()).trim();
  //       assertEquals(output, "7");

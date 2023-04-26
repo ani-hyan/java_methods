@@ -5,30 +5,30 @@ import java.util.Scanner;
 public class Methods {
     public static void main(String[] args){
         Methods m = new Methods();
-        Scanner sc = new Scanner(System.in);
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.print("Enter two integers: ");
+//        int x = sc.nextInt();
+//        int z = sc.nextInt();
+//
+//        System.out.println(m.first(x,z));
+//
+//        m.second();
+//
+//        System.out.print("Enter a boolean: ");
+//        boolean b = sc.nextBoolean();
+//        m.third(b);
+//
+//        System.out.print("Enter a character: ");
+//        char c = sc.next().charAt(0);
+//        System.out.println(m.fourth(c));
+//
+//        System.out.print("Enter two floats: ");
+//        float d = sc.nextFloat();
+//        float e = sc.nextFloat();
+//        System.out.println(m.fifth(d,e));
 
-        System.out.print("Enter two integers: ");
-        int x = sc.nextInt();
-        int z = sc.nextInt();
-
-        System.out.println(m.first(x,z));
-
-        m.second();
-
-        System.out.print("Enter a boolean: ");
-        boolean b = sc.nextBoolean();
-        m.third(b);
-
-        System.out.print("Enter a character: ");
-        char c = sc.next().charAt(0);
-        System.out.println(m.fourth(c));
-
-        System.out.print("Enter two floats: ");
-        float d = sc.nextFloat();
-        float e = sc.nextFloat();
-        System.out.println(m.fifth(d,e));
-
-        m.sixth();
+        System.err.println(m.sixth(3));
     }
 
     /**
@@ -52,6 +52,7 @@ public class Methods {
      * @param b
      */
     void third(boolean b){
+
         System.out.println("Hello world!");
     }
 
@@ -76,10 +77,11 @@ public class Methods {
      * recursion
      */
     int i = 0;
-    void sixth(){
+    int sixth(int i){
         while(i < 10){
             i++;
-            sixth();
+            sixth(i);
         }
+        return i;
     }
 }

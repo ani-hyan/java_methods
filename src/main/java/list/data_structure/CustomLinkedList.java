@@ -224,6 +224,7 @@ public class CustomLinkedList<E> implements List<E> {
         return 0;
     }
 
+
     @Override
     public ListIterator<E> listIterator() {
         return null;
@@ -238,4 +239,27 @@ public class CustomLinkedList<E> implements List<E> {
     public List<E> subList(int fromIndex, int toIndex) {
         return null;
     }
+
+    public class CustomLinkedListIterator<E> implements Iterator<E> {
+        private Node<E> currentNode;
+
+        public CustomLinkedListIterator(Node<E> head) {
+            currentNode = head;
+        }
+
+        public boolean hasNext() {
+            return currentNode != null;
+        }
+
+        public E next() {
+            E data = currentNode.getElement();
+            currentNode = currentNode.getNext();
+            return data;
+        }
+
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+    }
+
 }

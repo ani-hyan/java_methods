@@ -3,7 +3,10 @@ package homework_13;
 import java.util.*;
 
 public class ListMethods {
-    /**
+    public static void main(String[] args) {
+        LinkedList<Integer> j = new LinkedList<>();
+    }
+     /**
      * 1. Iterates through all elements in the array list.
      *
      * @param list
@@ -122,7 +125,7 @@ public class ListMethods {
     }
 
     /**
-     * 1. Iterates through all elements in the array list.
+     * 10. Iterates through all elements in the Linked list.
      *
      * @param list
      */

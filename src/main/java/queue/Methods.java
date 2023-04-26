@@ -88,4 +88,17 @@ public class Methods {
         return false;
     }
 
+    /**
+     * Write a Java program to add all the elements of a priority queue to another
+     * priority queue
+     * @param pq
+     * @return
+     * @param <E>
+     */
+    public static <E> PriorityQueue<E> copy(PriorityQueue<E> pq){
+        PriorityQueue<E> pqNew = new PriorityQueue<>();
+        pqNew.addAll(pq);
+        return pqNew;
+    }
+
 }

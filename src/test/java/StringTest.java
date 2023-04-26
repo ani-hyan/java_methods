@@ -11,7 +11,7 @@ public class StringTest {
     String string4;
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         string1 = new String("Hello");
         string2 = new String();
         string3 = "hello";
@@ -20,22 +20,22 @@ public class StringTest {
 
     @Test
     @DisplayName("Normal case")
-    public void testCharAt1(){
+    public void testCharAt1() {
         assertEquals('e', string1.charAt(1));
     }
 
     @Test
     @DisplayName("Out of bound index")
-    public void testCharAt2(){
+    public void testCharAt2() {
         assertThrows(IndexOutOfBoundsException.class,
                 () -> {
-            string1.charAt(5);
+                    string1.charAt(5);
                 });
     }
 
     @Test
     @DisplayName("Empty string")
-    public void testCharAt3(){
+    public void testCharAt3() {
         assertThrows(IndexOutOfBoundsException.class,
                 () -> {
                     string2.charAt(0);
@@ -44,7 +44,7 @@ public class StringTest {
 
     @Test
     @DisplayName("Negative index")
-    public void testCharAt4(){
+    public void testCharAt4() {
         assertThrows(IndexOutOfBoundsException.class,
                 () -> {
                     string1.charAt(-3);
@@ -53,43 +53,43 @@ public class StringTest {
 
     @Test
     @DisplayName("Comparing two strings with the same values")
-    public void testCompareTo1(){
+    public void testCompareTo1() {
         assertTrue(0 == string3.compareTo(string3));
     }
 
     @Test
     @DisplayName("Comparing two strings with the same names but different Cases")
-    public void testCompareTo2(){
+    public void testCompareTo2() {
         assertTrue(0 > string1.compareTo(string3));
     }
 
     @Test
     @DisplayName("Comparing two strings with the same names but different Cases")
-    public void testCompareTo3(){
+    public void testCompareTo3() {
         assertTrue(0 < string3.compareTo(string1));
     }
 
     @Test
     @DisplayName("Comparing with an empty string")
-    public void testCompareTo4(){
+    public void testCompareTo4() {
         assertTrue(0 < string2.compareTo(string1));
     }
 
     @Test
     @DisplayName("Comparing two strings with different lengths")
-    public void testCompareTo5(){
+    public void testCompareTo5() {
         assertTrue(0 > string3.compareTo(string4));
     }
 
     @Test
     @DisplayName("Concatenating two Strings")
-    public void testConcat1(){
+    public void testConcat1() {
         assertTrue("hellohi".equals(string3.concat(string4)));
     }
 
     @Test
     @DisplayName("Concatenating with an empty string")
-    public void testConcat2(){
+    public void testConcat2() {
         assertTrue(string3 == string3.concat(string2));
     }
 

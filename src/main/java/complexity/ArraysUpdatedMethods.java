@@ -5,29 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ArraysUpdatedMethods {
-    public static void main(String[] args) {
-        ArraysUpdatedMethods obj = new ArraysUpdatedMethods();
-        int[] arr1 = {-1, 0, 1, 2, -1, -4};
-        List<List<Integer>> triplets = obj.findTriplets(arr1);
-
-        for (List<Integer> triplet : triplets) {
-            System.out.println(triplet);
-        }
-
-        int[] arr2 = {2, 3, 4, 5, 3};
-        int[] replaced = obj.replace(arr2);
-        for (int i = 0; i < replaced.length; i++) {
-            System.out.print(replaced[i] + ", ");
-        }
-
-        obj.decreasingOrder(arr2);
-        for (int i = 0; i < arr2.length; i++) {
-            System.out.print(arr2[i] + ", ");
-        }
-
-    }
-
-    public List<List<Integer>> findTriplets(int[] arr) {
+       public List<List<Integer>> findTriplets(int[] arr) {
         int n = arr.length;
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(arr);
